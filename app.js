@@ -50,11 +50,11 @@ const requestHandler = (request, response) => {
            const name = arr[i].toLowerCase();
            const t = env[name];
            if ( t === undefined){
-              str += `Value ${name} is absent\n</br>`;
+              str += `Value ${name} is absent\n`;
             }
             else{
               //console.log(t);
-              str += `Value ${name} = ${t}\n</br>`;
+              str += `Value ${name} = ${t}\n`;
             }
         }
       //  console.log(str);
@@ -62,7 +62,7 @@ const requestHandler = (request, response) => {
     }
     else{ if (arr[1] === 'files'){
             if (arr.length < 3){
-              response.end(`Print file name\n</br>`);
+              response.end(`Print file name\n`);
             }
             else{
               const name = arr[2].toLowerCase();
@@ -74,12 +74,12 @@ const requestHandler = (request, response) => {
                   response.writeHead(200, {"Content-Type" : "application/pdf"});
                   fs.createReadStream(file).pipe(response);
                 }
-                else  response.end(`File ${name} not faund\n</br>`);
+                else  response.end(`File ${name} not faund\n`);
               }
-              else response.end(`Undefine file extension ${ext[1]}\n</br>`);
+              else response.end(`Undefine file extension ${ext[1]}\n`);
             }
         }
-        else  response.end(`Undefine command - ${arr[1]}\n</br>`);
+        else  response.end(`Undefine command - ${arr[1]}\n`);
   }
 }
 

@@ -4,7 +4,8 @@
   "description": "task lecture 3",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "printenv > .env",
+    "start": "node app.js"
   },
   "author": "Matsan Yevhenii",
   "license": "ISC",
