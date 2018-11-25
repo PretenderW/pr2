@@ -1,0 +1,14 @@
+{
+  "name": "env",
+  "version": "1.0.0",
+  "description": "task lecture 3",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Matsan Yevhenii",
+  "license": "ISC",
+  "dependencies": {
+    "ip": "^1.1.5"
+  }
+}
